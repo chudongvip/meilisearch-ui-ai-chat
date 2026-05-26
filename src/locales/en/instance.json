@@ -8,6 +8,8 @@
 		"label": "Meilisearch Version"
 	},
 	"db_size": "Instance DB Size",
+	"chats": "Chats",
+	"experimental_features": "Experimental Features",
 	"meili_version": "Meili Version",
 	"connection_failed": "Connection fail, go check your config! 🤥",
 	"create_index": {

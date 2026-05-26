@@ -19,6 +19,8 @@ import { Route as InsInsIDLayoutImport } from './routes/ins/$insID/_layout'
 import { Route as InsInsIDLayoutIndexImport } from './routes/ins/$insID/_layout/index'
 import { Route as InsInsIDLayoutTasksImport } from './routes/ins/$insID/_layout/tasks'
 import { Route as InsInsIDLayoutKeysImport } from './routes/ins/$insID/_layout/keys'
+import { Route as InsInsIDLayoutExperimentalFeaturesImport } from './routes/ins/$insID/_layout/experimental-features'
+import { Route as InsInsIDLayoutChatsImport } from './routes/ins/$insID/_layout/chats'
 import { Route as InsInsIDLayoutIndexIndexUIDLayoutImport } from './routes/ins/$insID/_layout/index/$indexUID/_layout'
 import { Route as InsInsIDLayoutIndexIndexUIDLayoutIndexImport } from './routes/ins/$insID/_layout/index/$indexUID/_layout/index'
 import { Route as InsInsIDLayoutIndexIndexUIDLayoutSettingImport } from './routes/ins/$insID/_layout/index/$indexUID/_layout/setting'
@@ -72,6 +74,19 @@ const InsInsIDLayoutTasksRoute = InsInsIDLayoutTasksImport.update({
 const InsInsIDLayoutKeysRoute = InsInsIDLayoutKeysImport.update({
   id: '/keys',
   path: '/keys',
+  getParentRoute: () => InsInsIDLayoutRoute,
+} as any)
+
+const InsInsIDLayoutExperimentalFeaturesRoute =
+  InsInsIDLayoutExperimentalFeaturesImport.update({
+    id: '/experimental-features',
+    path: '/experimental-features',
+    getParentRoute: () => InsInsIDLayoutRoute,
+  } as any)
+
+const InsInsIDLayoutChatsRoute = InsInsIDLayoutChatsImport.update({
+  id: '/chats',
+  path: '/chats',
   getParentRoute: () => InsInsIDLayoutRoute,
 } as any)
 
@@ -147,6 +162,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/ins/$insID'
       preLoaderRoute: typeof InsInsIDLayoutImport
       parentRoute: typeof InsInsIDRoute
+    }
+    '/ins/$insID/_layout/chats': {
+      id: '/ins/$insID/_layout/chats'
+      path: '/chats'
+      fullPath: '/ins/$insID/chats'
+      preLoaderRoute: typeof InsInsIDLayoutChatsImport
+      parentRoute: typeof InsInsIDLayoutImport
+    }
+    '/ins/$insID/_layout/experimental-features': {
+      id: '/ins/$insID/_layout/experimental-features'
+      path: '/experimental-features'
+      fullPath: '/ins/$insID/experimental-features'
+      preLoaderRoute: typeof InsInsIDLayoutExperimentalFeaturesImport
+      parentRoute: typeof InsInsIDLayoutImport
     }
     '/ins/$insID/_layout/keys': {
       id: '/ins/$insID/_layout/keys'
@@ -256,6 +285,8 @@ const InsInsIDLayoutIndexIndexUIDRouteWithChildren =
   )
 
 interface InsInsIDLayoutRouteChildren {
+  InsInsIDLayoutChatsRoute: typeof InsInsIDLayoutChatsRoute
+  InsInsIDLayoutExperimentalFeaturesRoute: typeof InsInsIDLayoutExperimentalFeaturesRoute
   InsInsIDLayoutKeysRoute: typeof InsInsIDLayoutKeysRoute
   InsInsIDLayoutTasksRoute: typeof InsInsIDLayoutTasksRoute
   InsInsIDLayoutIndexRoute: typeof InsInsIDLayoutIndexRoute
@@ -263,6 +294,9 @@ interface InsInsIDLayoutRouteChildren {
 }
 
 const InsInsIDLayoutRouteChildren: InsInsIDLayoutRouteChildren = {
+  InsInsIDLayoutChatsRoute: InsInsIDLayoutChatsRoute,
+  InsInsIDLayoutExperimentalFeaturesRoute:
+    InsInsIDLayoutExperimentalFeaturesRoute,
   InsInsIDLayoutKeysRoute: InsInsIDLayoutKeysRoute,
   InsInsIDLayoutTasksRoute: InsInsIDLayoutTasksRoute,
   InsInsIDLayoutIndexRoute: InsInsIDLayoutIndexRoute,
@@ -290,6 +324,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/warning': typeof WarningRoute
   '/ins/$insID': typeof InsInsIDLayoutRouteWithChildren
+  '/ins/$insID/chats': typeof InsInsIDLayoutChatsRoute
+  '/ins/$insID/experimental-features': typeof InsInsIDLayoutExperimentalFeaturesRoute
   '/ins/$insID/keys': typeof InsInsIDLayoutKeysRoute
   '/ins/$insID/tasks': typeof InsInsIDLayoutTasksRoute
   '/ins/$insID/': typeof InsInsIDLayoutIndexRoute
@@ -304,6 +340,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/warning': typeof WarningRoute
   '/ins/$insID': typeof InsInsIDLayoutIndexRoute
+  '/ins/$insID/chats': typeof InsInsIDLayoutChatsRoute
+  '/ins/$insID/experimental-features': typeof InsInsIDLayoutExperimentalFeaturesRoute
   '/ins/$insID/keys': typeof InsInsIDLayoutKeysRoute
   '/ins/$insID/tasks': typeof InsInsIDLayoutTasksRoute
   '/ins/$insID/index/$indexUID': typeof InsInsIDLayoutIndexIndexUIDLayoutIndexRoute
@@ -318,6 +356,8 @@ export interface FileRoutesById {
   '/warning': typeof WarningRoute
   '/ins/$insID': typeof InsInsIDRouteWithChildren
   '/ins/$insID/_layout': typeof InsInsIDLayoutRouteWithChildren
+  '/ins/$insID/_layout/chats': typeof InsInsIDLayoutChatsRoute
+  '/ins/$insID/_layout/experimental-features': typeof InsInsIDLayoutExperimentalFeaturesRoute
   '/ins/$insID/_layout/keys': typeof InsInsIDLayoutKeysRoute
   '/ins/$insID/_layout/tasks': typeof InsInsIDLayoutTasksRoute
   '/ins/$insID/_layout/': typeof InsInsIDLayoutIndexRoute
@@ -335,6 +375,8 @@ export interface FileRouteTypes {
     | '/'
     | '/warning'
     | '/ins/$insID'
+    | '/ins/$insID/chats'
+    | '/ins/$insID/experimental-features'
     | '/ins/$insID/keys'
     | '/ins/$insID/tasks'
     | '/ins/$insID/'
@@ -348,6 +390,8 @@ export interface FileRouteTypes {
     | '/'
     | '/warning'
     | '/ins/$insID'
+    | '/ins/$insID/chats'
+    | '/ins/$insID/experimental-features'
     | '/ins/$insID/keys'
     | '/ins/$insID/tasks'
     | '/ins/$insID/index/$indexUID'
@@ -360,6 +404,8 @@ export interface FileRouteTypes {
     | '/warning'
     | '/ins/$insID'
     | '/ins/$insID/_layout'
+    | '/ins/$insID/_layout/chats'
+    | '/ins/$insID/_layout/experimental-features'
     | '/ins/$insID/_layout/keys'
     | '/ins/$insID/_layout/tasks'
     | '/ins/$insID/_layout/'
@@ -415,11 +461,21 @@ export const routeTree = rootRoute
       "filePath": "ins/$insID/_layout.tsx",
       "parent": "/ins/$insID",
       "children": [
+        "/ins/$insID/_layout/chats",
+        "/ins/$insID/_layout/experimental-features",
         "/ins/$insID/_layout/keys",
         "/ins/$insID/_layout/tasks",
         "/ins/$insID/_layout/",
         "/ins/$insID/_layout/index/$indexUID"
       ]
+    },
+    "/ins/$insID/_layout/chats": {
+      "filePath": "ins/$insID/_layout/chats.tsx",
+      "parent": "/ins/$insID/_layout"
+    },
+    "/ins/$insID/_layout/experimental-features": {
+      "filePath": "ins/$insID/_layout/experimental-features.tsx",
+      "parent": "/ins/$insID/_layout"
     },
     "/ins/$insID/_layout/keys": {
       "filePath": "ins/$insID/_layout/keys.tsx",

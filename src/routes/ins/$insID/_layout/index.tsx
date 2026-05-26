@@ -109,6 +109,18 @@ function InsDash() {
 								{t("tasks")}
 							</Button>
 						</Link>
+						<Link to="chats" from="/ins/$insID">
+							<Button variant="light" size="sm">
+								<div className="i-lucide:messages-square w-1em h-1em" />
+								{t("chats")}
+							</Button>
+						</Link>
+						<Link to="experimental-features" from="/ins/$insID">
+							<Button variant="light" size="sm">
+								<div className="i-lucide:flask-conical w-1em h-1em" />
+								{t("experimental_features")}
+							</Button>
+						</Link>
 						<DumpButton />
 					</div>
 				</div>

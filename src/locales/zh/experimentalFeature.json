@@ -1,0 +1,60 @@
+{
+	"title": "实验性功能",
+	"subtitle": "Meilisearch 实验性能力的运行时开关。",
+	"empty": "未返回实验性功能",
+	"json_preview": "当前 payload",
+	"save": "保存修改",
+	"toast": {
+		"saved": "实验性功能已更新"
+	},
+	"features": {
+		"metrics": {
+			"label": "Metrics",
+			"description": "启用 Prometheus metrics 使用的 /metrics 端点。"
+		},
+		"logsRoute": {
+			"label": "Logs route",
+			"description": "启用日志配置使用的 /logs 路由。"
+		},
+		"editDocumentsByFunction": {
+			"label": "Edit documents by function",
+			"description": "启用通过 JavaScript 函数编辑文档。"
+		},
+		"containsFilter": {
+			"label": "CONTAINS filter",
+			"description": "启用 CONTAINS 过滤操作符。"
+		},
+		"dynamicSearchRules": {
+			"label": "Dynamic search rules",
+			"description": "启用动态搜索规则及相关路由。"
+		},
+		"network": {
+			"label": "Network",
+			"description": "启用分布式搜索网络能力。"
+		},
+		"getTaskDocumentsRoute": {
+			"label": "Task documents route",
+			"description": "启用从任务中获取文档的路由。"
+		},
+		"taskQueueCompactionRoute": {
+			"label": "Task queue compaction",
+			"description": "启用压缩任务队列数据库的路由。"
+		},
+		"compositeEmbedders": {
+			"label": "Composite embedders",
+			"description": "启用多来源 embedding 的 composite embedder。"
+		},
+		"chatCompletions": {
+			"label": "Chat completions",
+			"description": "启用 chat completion 能力。"
+		},
+		"multimodal": {
+			"label": "Multimodal",
+			"description": "启用图片和其他媒体的多模态搜索。"
+		},
+		"foreignKeys": {
+			"label": "Foreign keys",
+			"description": "启用文档 hydration 使用的外键支持。"
+		}
+	}
+}

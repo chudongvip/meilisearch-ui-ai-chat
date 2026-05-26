@@ -15,6 +15,8 @@ export const NAMESPACES = [
 	"dashboard",
 	"task",
 	"key",
+	"chat",
+	"experimentalFeature",
 	"upload",
 	"document",
 	"index",

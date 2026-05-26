@@ -2,6 +2,7 @@
 import { useIndexes } from "@/hooks/useIndexes";
 import { useMeiliClient } from "@/hooks/useMeiliClient";
 import { cn } from "@/lib/cn";
+import { MEILISEARCH_ACTIONS } from "@/generated/meilisearch-openapi-constants";
 import { AutoComplete, DatePicker, Input, Select, Tag } from "@douyinfe/semi-ui";
 import { Button, Tooltip } from "@nextui-org/react";
 import dayjs from "dayjs";
@@ -215,82 +216,9 @@ export const KeyForm: FC<Props> = ({
 								onChange={(arr) => field.onChange(arr)}
 								placeholder={t("form.actions.placeholder")}
 							>
-								{[
-									{
-										value: "search",
-										label: "search",
-									},
-									{
-										value: "documents.add",
-										label: "documents.add",
-									},
-									{
-										value: "documents.get",
-										label: "documents.get",
-									},
-									{
-										value: "documents.delete",
-										label: "documents.delete",
-									},
-									{
-										value: "indexes.create",
-										label: "indexes.create",
-									},
-									{
-										value: "indexes.get",
-										label: "indexes.get",
-									},
-									{
-										value: "indexes.update",
-										label: "indexes.update",
-									},
-									{
-										value: "indexes.delete",
-										label: "indexes.delete",
-									},
-									{
-										value: "tasks.get",
-										label: "tasks.get",
-									},
-									{
-										value: "settings.get",
-										label: "settings.get",
-									},
-									{
-										value: "settings.update",
-										label: "settings.update",
-									},
-									{
-										value: "stats.get",
-										label: "stats.get",
-									},
-									{
-										value: "dumps.create",
-										label: "dumps.create",
-									},
-									{
-										value: "version",
-										label: "version",
-									},
-									{
-										value: "keys.get",
-										label: "keys.get",
-									},
-									{
-										value: "keys.create",
-										label: "keys.create",
-									},
-									{
-										value: "keys.update",
-										label: "keys.update",
-									},
-									{
-										value: "keys.delete",
-										label: "keys.delete",
-									},
-								].map((action) => (
-									<Select.Option value={action.value} key={action.value}>
-										{action.label}
+								{MEILISEARCH_ACTIONS.map((action) => (
+									<Select.Option value={action} key={action}>
+										{action}
 									</Select.Option>
 								))}
 							</Select>

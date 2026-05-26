@@ -1,0 +1,47 @@
+{
+	"workspace_list": "Chat 工作区",
+	"workspace_count": "{{count}} 个工作区",
+	"detail_title": "工作区详情",
+	"settings": "设置",
+	"name": "名称",
+	"empty": "暂无 Chat 工作区",
+	"api_key_notice": "这里输入的 provider API key 会从当前浏览器提交到你的 Meilisearch 实例。本 UI 不会单独存储它。",
+	"toast": {
+		"settings_saved": "Chat 工作区设置已保存",
+		"settings_reset": "Chat 工作区设置已重置",
+		"workspace_created": "Chat 工作区已创建",
+		"workspace_deleted": "Chat 工作区已删除",
+		"workspace_uid_required": "请输入工作区 UID",
+		"workspace_uid_invalid": "工作区 UID 只能包含字母、数字、连字符和下划线，且长度不能超过 512 个字符。",
+		"invalid_json": "JSON 无效：{{error}}"
+	},
+	"create": {
+		"title": "创建 Chat 工作区",
+		"uid": "工作区 UID",
+		"uid_placeholder": "my-support-bot",
+		"source": "来源",
+		"api_key": "API key",
+		"api_key_placeholder": "sk-...",
+		"base_url": "Base URL",
+		"base_url_placeholder": "https://api.mistral.ai/v1",
+		"org_id": "Organization ID",
+		"org_id_placeholder": "dcba4321...",
+		"project_id": "Project ID",
+		"project_id_placeholder": "4321dcba...",
+		"api_version": "API version",
+		"api_version_placeholder": "2024-02-01",
+		"deployment_id": "Deployment ID",
+		"deployment_id_placeholder": "1234abcd...",
+		"system_prompt": "System prompt",
+		"system_prompt_placeholder": "You are a helpful assistant..."
+	},
+	"reset": {
+		"button": "重置设置",
+		"confirm_title": "重置 Chat 工作区设置",
+		"confirm_content": "确认重置工作区 {{uid}} 的设置？"
+	},
+	"delete": {
+		"confirm_title": "删除 Chat 工作区",
+		"confirm_content": "确认删除工作区 {{uid}}？"
+	}
+}

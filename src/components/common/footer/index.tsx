@@ -21,7 +21,7 @@ export const Footer: FC<Props> = ({ className = "" }) => {
 			<Version />
 			<a
 				className={"hover:underline"}
-				href={"//github.com/eyeix/meilisearch-ui"}
+				href={"https://github.com/chudongvip"}
 				target="_blank"
 				rel="noreferrer"
 			>

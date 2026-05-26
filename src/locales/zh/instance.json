@@ -8,6 +8,8 @@
 		"label": "Meilisearch 版本"
 	},
 	"db_size": "实例数据库大小",
+	"chats": "Chats",
+	"experimental_features": "实验性功能",
 	"meili_version": "Meili 版本",
 	"connection_failed": "连接失败, 去检查你的配置! 🤥",
 	"create_index": {

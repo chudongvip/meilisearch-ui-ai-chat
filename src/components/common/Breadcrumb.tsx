@@ -20,6 +20,14 @@ export const DashBreadcrumb = () => {
 		to: "/ins/$insID/tasks",
 		fuzzy: true,
 	}) as unknown as { insID: string };
+	const insChatsRoute = matchRoute({
+		to: "/ins/$insID/chats",
+		fuzzy: true,
+	}) as unknown as { insID: string };
+	const insExperimentalFeaturesRoute = matchRoute({
+		to: "/ins/$insID/experimental-features",
+		fuzzy: true,
+	}) as unknown as { insID: string };
 	const indexRoute = matchRoute({
 		to: "/ins/$insID/index/$indexUID",
 		fuzzy: true,
@@ -64,6 +72,16 @@ export const DashBreadcrumb = () => {
 				<BreadcrumbItem
 					href={`${baseUrl}/ins/${insRoute.insID}/tasks`}
 				>{`${t("common:tasks")}`}</BreadcrumbItem>
+			)}
+			{insChatsRoute && (
+				<BreadcrumbItem
+					href={`${baseUrl}/ins/${insRoute.insID}/chats`}
+				>{`${t("common:chats")}`}</BreadcrumbItem>
+			)}
+			{insExperimentalFeaturesRoute && (
+				<BreadcrumbItem
+					href={`${baseUrl}/ins/${insRoute.insID}/experimental-features`}
+				>{`${t("common:experimental_features")}`}</BreadcrumbItem>
 			)}
 			{indexRoute && (
 				<BreadcrumbItem

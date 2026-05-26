@@ -63,18 +63,15 @@ const Page = () => {
 								center: ["50%", "50%"],
 								roseType: "area",
 								itemStyle: {
-									normal: {
-										borderRadius: 8,
-										label: {
-											show: true,
-											position: "inner",
-											formatter: (params: any) =>
-												`${params.name}(${params.value})`,
-										},
-										labelLine: {
-											show: false,
-										},
-									},
+									borderRadius: 8,
+								},
+								label: {
+									show: true,
+									position: "inner",
+									formatter: (params) => `${params.name}(${params.value})`,
+								},
+								labelLine: {
+									show: false,
 								},
 								data: Object.entries(fieldDistribution)
 									.map(([k, v]) => ({ name: k, value: v }))

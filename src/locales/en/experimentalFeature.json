@@ -1,0 +1,60 @@
+{
+	"title": "Experimental Features",
+	"subtitle": "Runtime toggles for Meilisearch experimental capabilities.",
+	"empty": "No experimental features returned",
+	"json_preview": "Current payload",
+	"save": "Save changes",
+	"toast": {
+		"saved": "Experimental features updated"
+	},
+	"features": {
+		"metrics": {
+			"label": "Metrics",
+			"description": "Enable the /metrics endpoint for Prometheus metrics."
+		},
+		"logsRoute": {
+			"label": "Logs route",
+			"description": "Enable the /logs route for log configuration."
+		},
+		"editDocumentsByFunction": {
+			"label": "Edit documents by function",
+			"description": "Enable document editing via JavaScript functions."
+		},
+		"containsFilter": {
+			"label": "CONTAINS filter",
+			"description": "Enable the CONTAINS filter operator."
+		},
+		"dynamicSearchRules": {
+			"label": "Dynamic search rules",
+			"description": "Enable dynamic search rules and related routes."
+		},
+		"network": {
+			"label": "Network",
+			"description": "Enable distributed search network features."
+		},
+		"getTaskDocumentsRoute": {
+			"label": "Task documents route",
+			"description": "Enable the route to get documents from tasks."
+		},
+		"taskQueueCompactionRoute": {
+			"label": "Task queue compaction",
+			"description": "Enable the route to compact the task queue database."
+		},
+		"compositeEmbedders": {
+			"label": "Composite embedders",
+			"description": "Enable composite embedders for multi-source embeddings."
+		},
+		"chatCompletions": {
+			"label": "Chat completions",
+			"description": "Enable chat completion capabilities."
+		},
+		"multimodal": {
+			"label": "Multimodal",
+			"description": "Enable multimodal search with images and other media."
+		},
+		"foreignKeys": {
+			"label": "Foreign keys",
+			"description": "Enable foreign key support for document hydration."
+		}
+	}
+}

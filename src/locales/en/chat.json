@@ -1,0 +1,47 @@
+{
+	"workspace_list": "Chat Workspaces",
+	"workspace_count": "{{count}} workspaces",
+	"detail_title": "Workspace Detail",
+	"settings": "Settings",
+	"name": "Name",
+	"empty": "No chat workspaces",
+	"api_key_notice": "Provider API keys entered here are submitted from this browser to your Meilisearch instance. They are not stored separately by this UI.",
+	"toast": {
+		"settings_saved": "Chat workspace settings saved",
+		"settings_reset": "Chat workspace settings reset",
+		"workspace_created": "Chat workspace created",
+		"workspace_deleted": "Chat workspace deleted",
+		"workspace_uid_required": "Workspace UID is required",
+		"workspace_uid_invalid": "Workspace UID can only contain letters, numbers, hyphens, and underscores, and must be no more than 512 characters.",
+		"invalid_json": "Invalid JSON: {{error}}"
+	},
+	"create": {
+		"title": "Create chat workspace",
+		"uid": "Workspace UID",
+		"uid_placeholder": "my-support-bot",
+		"source": "Source",
+		"api_key": "API key",
+		"api_key_placeholder": "sk-...",
+		"base_url": "Base URL",
+		"base_url_placeholder": "https://api.mistral.ai/v1",
+		"org_id": "Organization ID",
+		"org_id_placeholder": "dcba4321...",
+		"project_id": "Project ID",
+		"project_id_placeholder": "4321dcba...",
+		"api_version": "API version",
+		"api_version_placeholder": "2024-02-01",
+		"deployment_id": "Deployment ID",
+		"deployment_id_placeholder": "1234abcd...",
+		"system_prompt": "System prompt",
+		"system_prompt_placeholder": "You are a helpful assistant..."
+	},
+	"reset": {
+		"button": "Reset settings",
+		"confirm_title": "Reset chat workspace settings",
+		"confirm_content": "Reset settings for workspace {{uid}}?"
+	},
+	"delete": {
+		"confirm_title": "Delete chat workspace",
+		"confirm_content": "Delete workspace {{uid}}?"
+	}
+}

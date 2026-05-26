@@ -9,7 +9,9 @@
 		"build:safe": "tsc && vite build && node scripts/post-build.js",
 		"build:docker": "vite build",
 		"preview": "vite preview",
-		"lint": "biome lint"
+		"lint": "biome lint",
+		"openapi:generate": "node scripts/generate-openapi-constants.mjs",
+		"openapi:check": "node scripts/check-openapi-constants.mjs"
 	},
 	"repository": "https://github.com/eyeix/meilisearch-ui",
 	"homepage": "https://github.com/eyeix/meilisearch-ui#readme",

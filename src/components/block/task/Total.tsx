@@ -12,7 +12,7 @@ export const TaskTotal: FC<{
 
 	return (
 		<div className="px-4 py-1 text-sm text-gray-600">
-			{t("total", { count: total.toLocaleString() })}
+			{t("total", { count: total })}
 		</div>
 	);
 };
